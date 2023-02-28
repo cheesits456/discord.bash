@@ -9,4 +9,4 @@ curl	-X POST \
 	-H "Authorization: Bot $TOKEN" \
 	-H "Content-Type: application/json"\
 	-d "{\"content\": \"$2\"}" \
-	https://discord.com/api/v$api_version/channels/$1/messages
+	https://discord.com/api/v"$api_version"/channels/"$1"/messages
