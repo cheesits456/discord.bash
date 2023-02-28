@@ -21,3 +21,11 @@ The `./edit_message.sh` script takes 3 arguments: a channel ID, a message ID, an
 ```bash
 ./edit_message.sh 719188046809006142 1080005282001862766 "testing 456"
 ```
+
+### Deleting Messages
+
+The `./delete_message.sh` script takes 2 arguments: a channel ID and a message ID.
+
+```bash
+./delete_message.sh 719188046809006142 1080005282001862766
+```
