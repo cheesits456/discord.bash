@@ -31,3 +31,13 @@ The `./messages/delete.sh` script takes 2 arguments: a channel ID and a message 
 ```bash
 ./messages/delete.sh 719188046809006142 1080005282001862766
 ```
+
+### Channels
+
+#### Create
+
+The `./channels/create.sh` script takes 2 arguments: a guild ID and the channel name.
+
+```bash
+./channels/create.sh 444523238580813825 "testing-channel"
+```
