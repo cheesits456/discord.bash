@@ -13,3 +13,11 @@ The `./send_message.sh` script takes 2 arguments: a channel ID and the message c
 ```bash
 ./send_message.sh 719188046809006142 "testing 123"
 ```
+
+### Editing Messages
+
+The `./edit_message.sh` script takes 3 arguments: a channel ID, a message ID, and the new message content.
+
+```bash
+./edit_message.sh 719188046809006142 1080005282001862766 "testing 456"
+```
