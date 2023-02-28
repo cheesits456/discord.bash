@@ -2,11 +2,9 @@
 source ./.env
 source ./config.sh
 
-# Usage: ./edit_message.sh <channel_id> <message_id> <message_content>
+# Usage: ./messages/delete.sh <channel_id> <message_id>
 
-curl	-X PATCH \
+curl	-X DELETE \
 	-A "discord.bash ($repo, $version)" \
 	-H "Authorization: Bot $TOKEN" \
-	-H "Content-Type: application/json"\
-	-d "{\"content\": \"$3\"}" \
 	https://discord.com/api/v"$api_version"/channels/"$1"/messages/"$2"

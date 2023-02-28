@@ -2,7 +2,7 @@
 source ./.env
 source ./config.sh
 
-# Usage: ./send_message.sh <channel_id> <message_content>
+# Usage: ./messages/create.sh <channel_id> <message_content>
 
 curl	-X POST \
 	-A "discord.bash ($repo, $version)" \
