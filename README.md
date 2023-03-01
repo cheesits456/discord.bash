@@ -4,40 +4,46 @@ An attempt at making a wrapper for Discord's HTTP API in bash
 
 ## Usage
 
-First you'll need to set a bot token as the `TOKEN` variable in the `.env` file.
+First you'll need to set a bot token as the `TOKEN` variable in the `.env` file. In your script you'll need to `source` the `index.sh` file to gain access to the functions. A basic example to send a message to a channel would be like this:
+
+```bash
+#!/bin/env bash
+source ./index.sh
+create_message 719188046809006142 "This is a message sent from bash"
+```
 
 ### Messages
 
 #### Create
 
-The `./messages/create.sh` script takes 2 arguments: a channel ID and the message content.
+The `create_message` function takes 2 arguments: a channel ID and the message content.
 
 ```bash
-./messages/create.sh 719188046809006142 "testing 123"
+create_message 719188046809006142 "testing 123"
 ```
 
 #### Edit
 
-The `./messages/edit.sh` script takes 3 arguments: a channel ID, a message ID, and the new message content.
+The `edit_message` function takes 3 arguments: a channel ID, a message ID, and the new message content.
 
 ```bash
-./messages/edit.sh 719188046809006142 1080005282001862766 "testing 456"
+edit_message 719188046809006142 1080005282001862766 "testing 456"
 ```
 
 #### Delete
 
-The `./messages/delete.sh` script takes 2 arguments: a channel ID and a message ID.
+The `delete_message` function takes 2 arguments: a channel ID and a message ID.
 
 ```bash
-./messages/delete.sh 719188046809006142 1080005282001862766
+delete_message 719188046809006142 1080005282001862766
 ```
 
 ### Channels
 
 #### Create
 
-The `./channels/create.sh` script takes 2 arguments: a guild ID and the channel name.
+The `create_channel` function takes 2 arguments: a guild ID and the channel name.
 
 ```bash
-./channels/create.sh 444523238580813825 "testing-channel"
+create_channel 444523238580813825 "testing-channel"
 ```
