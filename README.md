@@ -47,3 +47,11 @@ The `create_channel` function takes 2 arguments: a guild ID and the channel name
 ```bash
 create_channel 444523238580813825 "testing-channel"
 ```
+
+#### Edit
+
+The `edit_channel` function takes 2 arguments: a channel ID and the new channel name.
+
+```bash
+edit_channel 444523238580813825 "testing-123"
+```
