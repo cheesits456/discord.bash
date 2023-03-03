@@ -1,8 +1,10 @@
-#!/bin/env bash
-source ./.env
-source ./config.sh
+#!/usr/bin/env bash
+SCRIPT_DIR=$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)
 
-for file in ./*/*; do
+source "$SCRIPT_DIR/.env"
+source "$SCRIPT_DIR/config.sh"
+
+for file in "$SCRIPT_DIR"/*/*; do
 	source "$file"
 done
 
