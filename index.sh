@@ -2,8 +2,8 @@
 source ./.env
 source ./config.sh
 
-for dir in */; do
-	for file in ./"$dir"*; do
-		source "$file"
-	done
+for file in ./*/*; do
+	source "$file"
 done
+
+errcho() { >&2 echo "$@"; }
