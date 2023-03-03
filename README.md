@@ -7,7 +7,7 @@ An attempt at making a wrapper for Discord's HTTP API in bash
 First you'll need to set a bot token as the `TOKEN` variable in the `.env` file. In your script you'll need to `source` the `index.sh` file to gain access to the functions. A basic example to send a message to a channel would be like this:
 
 ```bash
-#!/bin/env bash
+#!/usr/bin/env bash
 source ./index.sh
 channel="719188046809006142"
 content="This is a message sent from bash"

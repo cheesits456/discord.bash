@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 # Usage: create_channel <guild_id> <channel_name>
 

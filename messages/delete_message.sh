@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 # Usage: delete_message <channel_id> <message_id>
 

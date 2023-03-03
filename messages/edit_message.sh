@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 # Usage: edit_message <channel_id> <message_id> <message_content>
 

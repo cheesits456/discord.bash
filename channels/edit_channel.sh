@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 # Usage: edit_channel <channel_id> <channel_name>
 
