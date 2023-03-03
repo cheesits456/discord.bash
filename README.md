@@ -31,7 +31,9 @@ The `create_message` function depends on the `$channel` variable and at least on
 
 - `$channel` is a channel ID
 - `$content` is the desired message content
-- `$attachment` is a path to a file 
+- `$attachment` is a path to a file
+
+Example:
 
 ```bash
 channel="719188046809006142"
