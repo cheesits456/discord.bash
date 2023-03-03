@@ -9,17 +9,35 @@ First you'll need to set a bot token as the `TOKEN` variable in the `.env` file.
 ```bash
 #!/bin/env bash
 source ./index.sh
-create_message 719188046809006142 "This is a message sent from bash"
+channel="719188046809006142"
+content="This is a message sent from bash"
+send_message
+```
+
+Every function takes an optional `clear` argument that unsets every variable used by the function, for example:
+
+```bash
+channel="719188046809006142"
+content="This is a message sent from bash"
+send_message "clear"
+echo "$channel" # this will print a blank line
 ```
 
 ### Messages
 
 #### Create
 
-The `create_message` function takes 2 arguments: a channel ID and the message content.
+The `create_message` function depends on the `$channel` variable and at least one of the `$content` or `$attachment` variables, where:
+
+- `$channel` is a channel ID
+- `$content` is the desired message content
+- `$attachment` is a path to a file 
 
 ```bash
-create_message 719188046809006142 "testing 123"
+channel="719188046809006142"
+content="testing 123"
+attachment="/path/to/file.txt"
+create_message
 ```
 
 #### Edit
