@@ -28,3 +28,9 @@ generate_filename() {
 		printf "%x" $((RANDOM % 15))
 	done
 }
+
+parse_json() {
+	filename=$(generate_filename)
+	echo -n "$1" > "$filename"
+	json-parse "$filename"
+}
