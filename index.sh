@@ -3,6 +3,7 @@ SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 source "$SCRIPT_DIR/.env"
 source "$SCRIPT_DIR/config.sh"
+source "$SCRIPT_DIR/json-parse.sh"
 
 for file in "$SCRIPT_DIR"/*/*; do
 	source "$file"
