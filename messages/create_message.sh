@@ -21,7 +21,7 @@ create_message() {
 	)
 
 	if [ "$data" == "curl: (26) Failed to open/read local data from file/application" ]; then
-		error_message "$(caller)" "File name provided in \e[1;93m\$attachment\e[0m variable is invalid"
+		error_message "$(caller)" "File name provided in \$attachment variable is invalid"
 	fi
 
 	if [ "$1" == "clear" ]; then
