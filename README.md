@@ -23,6 +23,74 @@ send_message "clear"
 echo "$channel" # this will print a blank line
 ```
 
+After a function is called, it'll parse the JSON data returned by the API into variables that you can use. When parsed, any values that are `null` or empty arrays will be ignored. Nested object keys will be combined with an underscore, and in an array the array index will be added with an underscore. An example of JSON data returned from the API is
+
+```json
+{
+	"id": "1081056853196296292",
+	"type": 0,
+	"content": "1\" 2: 3, 4} 5{ 6[ 7]",
+	"channel_id": "719188046809006142",
+	"author": {
+		"id": "739697358350057503",
+		"username": "SSH Bot",
+		"display_name": null,
+		"avatar": "fac5be6015240610d44ab269f49727d0",
+		"avatar_decoration": null,
+		"discriminator": "2953",
+		"public_flags": 0,
+		"bot": true
+	},
+	"attachments": [
+		{
+			"id": "1081056852961406986",
+			"filename": "text.txt",
+			"size": 121,
+			"url": "https://cdn.discordapp.com/attachments/719188046809006142/1081056852961406986/text.txt",
+			"proxy_url": "https://media.discordapp.net/attachments/719188046809006142/1081056852961406986/text.txt",
+			"content_type": "text/plain; charset=utf-8"
+		}
+	],
+	"embeds": [],
+	"mentions": [],
+	"mention_roles": [],
+	"pinned": false,
+	"mention_everyone": false,
+	"tts": false,
+	"timestamp": "2023-03-03T03:33:58.867000+00:00",
+	"edited_timestamp": null,
+	"flags": 0,
+	"components": [],
+	"referenced_message": null
+}
+```
+
+The corresponding variables this will be parsed into are
+
+```bash
+id="1081056853196296292"
+type=0
+content="1\" 2: 3, 4} 5{ 6[ 7]"
+channel_id="719188046809006142"
+author_id="739697358350057503"
+author_username="SSH Bot"
+author_avatar="fac5be6015240610d44ab269f49727d0"
+author_discriminator="2953"
+author_public_flags=0
+author_bot=true
+attachments_0_id="1081056852961406986"
+attachments_0_filename="text.txt"
+attachments_0_size=121
+attachments_0_url="https://cdn.discordapp.com/attachments/719188046809006142/1081056852961406986/text.txt"
+attachments_0_proxy_url="https://media.discordapp.net/attachments/719188046809006142/1081056852961406986/text.txt"
+attachments_0_content_type="text/plain; charset=utf-8"
+pinned=false
+mention_everyone=false
+tts=false
+timestamp="2023-03-03T03:33:58.867000+00:00"
+flags=0
+```
+
 ### Messages
 
 #### Create
