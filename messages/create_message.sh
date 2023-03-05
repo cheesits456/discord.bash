@@ -3,11 +3,11 @@
 create_message() {
 
 	if [ -z "$channel" ]; then
-		error_message "$(caller)" "\e[1;93m\$channel\e[0m variable is required"
+		error_message "$(caller)" "\$channel variable is required"
 		return
 	fi
 	if [ -z "$content" ] && [ -z "$attachment" ]; then
-		error_message "$(caller)" "At least one of the \e[1;93m\$content\e[0m or \e[1;93m\$attachment\e[0m variables is required"
+		error_message "$(caller)" "At least one of the \$content or \$attachment variables is required"
 		return
 	fi 
 
