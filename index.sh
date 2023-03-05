@@ -16,3 +16,9 @@ error_message() {
 	function=$(caller | tac -s/ | head -n1 | awk -F. '{print $1}')
 	errcho -e "\e[1;91mERR \e[96m$function\e[0m ($(echo -n "$1" | awk '{print $2}'):$(echo -n "$1" | awk '{print $1}'))\n\t$2"
 }
+
+generate_filename() {
+	for i in {1..8}; do
+		printf "%x" $((RANDOM % 15))
+	done
+}
