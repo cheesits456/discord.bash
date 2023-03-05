@@ -46,8 +46,8 @@ After a function is called, it'll parse the JSON data returned by the API into v
 			"id": "1081056852961406986",
 			"filename": "text.txt",
 			"size": 121,
-			"url": "https://cdn.discordapp.com/attachments/719188046809006142/1081056852961406986/text.txt",
-			"proxy_url": "https://media.discordapp.net/attachments/719188046809006142/1081056852961406986/text.txt",
+			"url": "https://cdn.discordapp.com/attachments/719188046809006142/1081056852961406987/text.txt",
+			"proxy_url": "https://media.discordapp.net/attachments/719188046809006142/1081056852961406987/text.txt",
 			"content_type": "text/plain; charset=utf-8"
 		}
 	],
@@ -81,8 +81,8 @@ author_bot=true
 attachments_0_id="1081056852961406986"
 attachments_0_filename="text.txt"
 attachments_0_size=121
-attachments_0_url="https://cdn.discordapp.com/attachments/719188046809006142/1081056852961406986/text.txt"
-attachments_0_proxy_url="https://media.discordapp.net/attachments/719188046809006142/1081056852961406986/text.txt"
+attachments_0_url="https://cdn.discordapp.com/attachments/719188046809006142/1081056852961406987/text.txt"
+attachments_0_proxy_url="https://media.discordapp.net/attachments/719188046809006142/1081056852961406987/text.txt"
 attachments_0_content_type="text/plain; charset=utf-8"
 pinned=false
 mention_everyone=false
