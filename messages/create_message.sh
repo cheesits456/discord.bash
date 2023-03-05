@@ -29,4 +29,8 @@ create_message() {
 		unset content
 		unset attachment
 	fi
+
+	filename=$(generate_filename)
+	echo -n "$data" > "$filename"
+	json-parse "$filename"
 }
