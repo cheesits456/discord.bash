@@ -12,7 +12,8 @@ create_message() {
 	fi 
 
 	data=$(
-		curl 	--request	"POST" \
+		curl	--no-progress-meter \
+		 	--request	"POST" \
 			--user-agent	"discord.bash ($repo, $version)" \
 			--header	"Authorization: Bot $TOKEN" \
 			--form		"payload_json={\"content\":\"${content//\"/\\\"}\"}" \
