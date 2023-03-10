@@ -91,9 +91,9 @@ timestamp="2023-03-03T03:33:58.867000+00:00"
 flags=0
 ```
 
-### Messages
+## Messages
 
-#### Create
+### Create
 
 The `create_message` function depends on the `$channel` and at least one of the `$content` or `$attachment` variables, where:
 
@@ -110,7 +110,7 @@ attachment="/path/to/file.txt"
 create_message
 ```
 
-#### Edit
+### Edit
 
 The `edit_message` function depends on the `$channel`, `$message`, and at least one of the `$content` or `$attachment` variables, where:
 
@@ -118,6 +118,8 @@ The `edit_message` function depends on the `$channel`, `$message`, and at least 
 - `$message` is the ID of the message to edit
 - `$content` is the desired message content
 - `$attachment` is a path to a file
+
+Example:
 
 ```bash
 channel="719188046809006142"
@@ -127,7 +129,7 @@ attachment="/path/to/another-file.txt"
 edit_message 719188046809006142 1080005282001862766 "testing 456"
 ```
 
-#### Delete
+### Delete
 
 The `delete_message` function depends on the `$channel` and `$message` variables, where:
 
@@ -142,9 +144,9 @@ message="1083634354493849660"
 delete_message
 ```
 
-### Channels
+## Channels
 
-#### Create
+### Create
 
 The `create_channel` function takes 2 arguments: a guild ID and the channel name.
 
@@ -152,7 +154,7 @@ The `create_channel` function takes 2 arguments: a guild ID and the channel name
 create_channel 444523238580813825 "testing-channel"
 ```
 
-#### Edit
+### Edit
 
 The `edit_channel` function takes 2 arguments: a channel ID and the new channel name.
 
@@ -160,7 +162,7 @@ The `edit_channel` function takes 2 arguments: a channel ID and the new channel 
 edit_channel 1080391136033636362 "testing-123"
 ```
 
-#### Delete
+### Delete
 
 The `delete_channel` function takes 1 argument: a channel ID.
 
