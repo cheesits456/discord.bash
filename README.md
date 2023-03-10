@@ -95,7 +95,7 @@ flags=0
 
 #### Create
 
-The `create_message` function depends on the `$channel` variable and at least one of the `$content` or `$attachment` variables, where:
+The `create_message` function depends on the `$channel` and at least one of the `$content` or `$attachment` variables, where:
 
 - `$channel` is a channel ID
 - `$content` is the desired message content
@@ -112,9 +112,18 @@ create_message
 
 #### Edit
 
-The `edit_message` function takes 3 arguments: a channel ID, a message ID, and the new message content.
+The `edit_message` function depends on the `$channel`, `$message`, and at least one of the `$content` or `$attachment` variables, where:
+
+- `$channel` is a channel ID
+- `$message` is the ID of the message to edit
+- `$content` is the desired message content
+- `$attachment` is a path to a file
 
 ```bash
+channel="719188046809006142"
+message="1083634354493849660"
+content="testing 456"
+attachment="/path/to/another-file.txt"
 edit_message 719188046809006142 1080005282001862766 "testing 456"
 ```
 
