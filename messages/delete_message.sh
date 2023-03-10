@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# Usage: delete_message <channel_id> <message_id>
-
 delete_message() {
 
 	if [ -z "$channel" ]; then
