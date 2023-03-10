@@ -120,10 +120,17 @@ edit_message 719188046809006142 1080005282001862766 "testing 456"
 
 #### Delete
 
-The `delete_message` function takes 2 arguments: a channel ID and a message ID.
+The `delete_message` function depends on the `$channel` and `$message` variables, where:
+
+- `$channel` is a channel ID
+- `$message` is the ID of the message to delete
+
+Example:
 
 ```bash
-delete_message 719188046809006142 1080005282001862766
+channel="719188046809006142"
+message="1083634354493849660"
+delete_message
 ```
 
 ### Channels
