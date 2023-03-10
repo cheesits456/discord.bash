@@ -126,7 +126,7 @@ channel="719188046809006142"
 message="1083634354493849660"
 content="testing 456"
 attachment="/path/to/another-file.txt"
-edit_message 719188046809006142 1080005282001862766 "testing 456"
+edit_message
 ```
 
 ### Delete
