@@ -1,23 +1,23 @@
 #!/usr/bin/env bash
 json-parse() {
 	[ -z "$1" ] && exit 1
-	input=$(cat "$1")
-	output=""
-	i=0
-	line_break='
+	local input=$(cat "$1")
+	local output=""
+	local i=0
+	local line_break='
 '
-	exit=0
-	var_name=()
-	level=0
-	in_value=false
-	in_key=false
-	in_array=false
-	in_object=false
-	after_key=false
-	array_index=0
-	keyname=""
-	value=""
-	last_char=""
+	local exit=0
+	local var_name=()
+	local level=0
+	local in_value=false
+	local in_key=false
+	local in_array=false
+	local in_object=false
+	local after_key=false
+	local array_index=0
+	local keyname=""
+	local value=""
+	local last_char=""
 	while [ $exit == "0" ]; do
 		char=${input:i:1}
 		case $char in
