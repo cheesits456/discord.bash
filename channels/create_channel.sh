@@ -17,18 +17,10 @@ create_channel() {
 	fi
 
 	case "$type" in
-		"category")
-			type_int=4
-		;;
-		"forum")
-			type_int=15
-		;;
-		"text")
-			type_int=0
-		;;
-		"voice")
-			type_int=2
-		;;
+		"category") type_int=4  ;;
+		"forum")    type_int=15 ;;
+		"text")     type_int=0  ;;
+		"voice")    type_int=2  ;;
 	esac
 
 	data=$(
