@@ -1,10 +1,27 @@
 #!/usr/bin/env bash
 
-# Usage: delete_channel <channel_id>
-
 delete_channel() {
-	curl -X DELETE \
-	-A "discord.bash ($repo, $version)" \
-	-H "Authorization: Bot $TOKEN" \
-	https://discord.com/api/v"$api_version"/channels/"$1"
+
+	if [ -z "$guild" ]; then
+		error_message "$(caller)" "\$guild variable is required"
+		return
+	fi
+	if [ -z "$name" ]; then
+		error_message "$(caller)" "\$name variable is required"
+		return
+	fi
+
+	data=$(
+		curl	--no-progress-meter \
+		 	--request	"DELETE" \
+			--user-agent	"discord.bash ($repo, $version)" \
+			--header	"Authorization: Bot $TOKEN" \
+			https://discord.com/api/v"$api_version"/channels/"$channel" 2>&1
+	)
+
+	if [ "$1" == "clear" ]; then
+		unset channel
+	fi
+
+	parse_json "$data"
 }
