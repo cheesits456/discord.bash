@@ -44,6 +44,8 @@ create_channel() {
 	if [ "$1" == "clear" ]; then
 		unset guild
 		unset name
+		unset topic
+		unset type
 	fi
 
 	parse_json "$data"
