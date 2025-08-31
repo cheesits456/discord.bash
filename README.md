@@ -93,9 +93,6 @@ flags=0
 
 While coding it can be useful to see the data returned by the API so you know what the variable names are. To print out the parsed JSON data after executing a function, set a varable called `verbose` to `true` as in the following example:
 
-> [!IMPORTANT]  
-> The `verbose` variable will unset itself after each function call, so if you want multiple functions to print out their variables, you'll need to set the `verbose` variable to `true` before each function call
-
 ```bash
 #!/usr/bin/env bash
 source ./index.sh
@@ -104,6 +101,9 @@ content="This is a message sent from bash"
 verbose=true
 send_message
 ```
+
+> [!IMPORTANT]  
+> The `verbose` variable will unset itself after each function call, so if you want multiple functions to print out their variables, you'll need to set the `verbose` variable to `true` before each function call
 
 ## Messages
 
