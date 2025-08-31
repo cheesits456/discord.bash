@@ -162,14 +162,22 @@ delete_message
 
 ### Create
 
-The `create_channel` function depends on the `$guild` and `$name` variables, where:
+The `create_channel` function depends on the `$guild` and `$name` variables with optional `$topic` and `$type` variables, where:
 
 - `$guild` is a server ID
 - `$name` is the desired channel name
+- `$topic` is the desired channel topic (for forum channels this variable will be used for the post guidelines)
+- `$type` is the desired channel type, which can be one of the following:
+	- `category`
+	- `forum`
+	- `text` (default if not specified)
+	- `voice`
 
 ```bash
 guild="444523238580813825"
 name="new-channel"
+topic="channel topic"
+type="text"
 create_channel
 ```
 
