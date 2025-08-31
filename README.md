@@ -162,10 +162,15 @@ delete_message
 
 ### Create
 
-The `create_channel` function takes 2 arguments: a guild ID and the channel name.
+The `create_channel` function depends on the `$guild` and `$name` variables, where:
+
+- `$guild` is a server ID
+- `$name` is the desired channel name
 
 ```bash
-create_channel 444523238580813825 "testing-channel"
+guild="444523238580813825"
+name="new-channel"
+create_channel
 ```
 
 ### Edit
