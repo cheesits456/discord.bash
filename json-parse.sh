@@ -140,6 +140,10 @@ json-parse() {
 		fi
 	done
 	echo -n "$filtered_output" > "$1"
+	if [ "$verbose" == true ]; then
+		cat "$1"
+		unset verbose
+	fi
 	source "$1"
 	rm "$1"
 }
