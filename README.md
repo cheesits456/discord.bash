@@ -183,10 +183,17 @@ create_channel
 
 ### Edit
 
-The `edit_channel` function takes 2 arguments: a channel ID and the new channel name.
+The `edit_channel` function depends on the `$channel` and at least one of the `$name` or `$topic` variables, where:
+
+- `$channel` is a channel ID
+- `$name` is the desired channel name
+- `$topic` is the desired channel topic (set to `none` to remove the channel's topic)
 
 ```bash
-edit_channel 1080391136033636362 "testing-123"
+channel="719188046809006142"
+name="new-name"
+topic="new topic"
+edit_channel
 ```
 
 ### Delete
