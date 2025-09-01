@@ -13,30 +13,6 @@ edit_channel() {
 		return
 	fi
 
-	echo "{$(
-				if [ -z "$name" ]; then
-					echo -n ""
-				else
-					echo -n "\"name\":\"${name}\""
-				fi
-			)$(
-				if [ -z "$name" ] || [ -z "$topic" ]; then
-					echo -n ""
-				else
-					echo -n ","
-				fi
-			)$(
-				if [ -z "$topic" ]; then
-					echo -n ""
-				else
-					if [ "$topic" == "none" ]; then
-						echo -n "\"topic\":\"\""
-					else
-						echo -n "\"topic\":\"${topic}\""
-					fi
-				fi
-			)}"
-
 	data=$(
 		curl	--no-progress-meter \
 		 	--request	"PATCH" \
